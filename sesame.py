@@ -42,6 +42,8 @@ class Sesame(object):
 				sprinkles =- 1
 				already.append((rand_x,rand_y))
 
+		# et cetera
+
 
 	def display(self):
 
