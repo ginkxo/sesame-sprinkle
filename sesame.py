@@ -11,6 +11,9 @@ class Sesame(object):
 		flowers = ["."," "]
 
 	def generate(self):
+		"""
+		Generates the dot field.
+		"""
 
 		if self.percentage < 0:
 			self.percentage = 0
@@ -41,8 +44,6 @@ class Sesame(object):
 				sesame_field[rand_y][rand_x] = "."
 				sprinkles =- 1
 				already.append((rand_x,rand_y))
-
-		# et cetera
 
 
 	def display(self):
