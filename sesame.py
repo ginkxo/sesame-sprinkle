@@ -4,6 +4,7 @@ from sys import argv
 class Sesame(object):
 
 	def __init__(self, height, width, percentage):
+
 		self.height = height
 		self.width = width
 		self.percentage = percentage
@@ -13,9 +14,6 @@ class Sesame(object):
 		self.generate()
 
 	def generate(self):
-		"""
-		Generates the dot field.
-		"""
 
 		if self.percentage < 0:
 			self.percentage = 0
@@ -51,6 +49,7 @@ class Sesame(object):
 
 
 	def display(self):
+
 		vertical_bound = []
 		for x in range(self.width):
 			vertical_bound.append("=")
@@ -59,16 +58,25 @@ class Sesame(object):
 			print "="+"".join(self.sesame_field[i])+"="
 		print "="+"".join(vertical_bound)+"="
 
+	def display_borderless(self):
+		
+		for i in range(self.height):
+			print "".join(self.sesame_field[i])
+
+
 	def set_dimensions(self, height, width):
+
 		self.height = height
 		self.width = width
 		self.generate()
 
 	def set_percentages(self, percentage):
+
 		self.percentage = percentage
 		self.generate()
 
 	def export(self): 
+
 		script, filename = argv
 		target = open(filename, 'w')
 		target.seek(0)
@@ -81,9 +89,3 @@ class Sesame(object):
 			target.write("="+"".join(self.sesame_field[i])+"="+"\n")
 		target.write("="+"".join(vertical_bound)+"="+"\n")
 		target.close()
-
-
-
-if __name__ == "__main__":
-	sesame = Sesame(25,25,0.1)
-	sesame.display()
