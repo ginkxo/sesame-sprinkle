@@ -1,7 +1,7 @@
 # sesame-sprinkle
 small generator of dot &amp; space fields -
 
-![alt text](http://imgur.com/108ab3dd-b8db-4d55-bc0c-dc30166c4122 "example")
+![alt text](https://github.com/ginkxo/sesame-sprinkle/raw/master/images/example_image.png "example")
 
 ## how to use
 
